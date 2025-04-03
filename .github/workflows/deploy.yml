@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.SERVERSSHSECRET }}
           port: 22002
           script: |
-            cd /ruta/del/proyecto
+            cd public_html
             git fetch origin main
             git reset --hard origin/main
             echo "Repositorio actualizado en $(date)" >> /home/dos/update_log.txt
