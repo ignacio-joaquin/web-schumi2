@@ -1,0 +1,27 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # Se ejecuta cuando hay un push en main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 200.3.127.46
+          username: dos
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22002
+          script: |
+            cd /ruta/del/proyecto
+            git fetch origin main
+            git reset --hard origin/main
+            echo "Repositorio actualizado en $(date)" >> /home/dos/update_log.txt
