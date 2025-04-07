@@ -1,3 +1,21 @@
+:root {
+  --background: #001d3d;
+  --background2: #0D1B2A;
+  --body: #003566;
+  --body2: #1B263B;
+  --buttons: #415A77;
+  --opbuttons: #D81e5b;
+  --hovver: #e03b72;
+  --text: #94a3b8;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
